@@ -1,0 +1,59 @@
+@import '../../common';
+
+.groupMemberBox {
+  display: flex;
+  flex-wrap: wrap;
+  .groupMembers {
+    min-height: 20px;
+    color: white;
+    .member {
+      color: white;
+      border: 2px solid $primaryColor;
+      margin: 10px;
+      border-radius: 5px;
+      min-width: 70px;
+      max-width: max-content;
+      padding: 5px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 3px;
+      h5 {
+        display: none;
+      }
+    }
+    .member:hover {
+      h5 {
+        display: block;
+      }
+    }
+  }
+}
+
+.ant-drawer-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ant-drawer-wrapper-body {
+  background-color: $secondaryColor;
+  color: $primaryColor;
+}
+.ant-drawer-title{
+  color: $primaryColor !important;
+}
+.ant-input {
+  background-color: $secondaryColor;
+  color: $primaryColor !important;
+  border-color: $primaryColor;
+}
+.ant-input::placeholder {
+  color: white ;
+}
+.anticon svg {
+  color: red ;
+}
+.ant-btn-default {
+  background-color: $secondaryColor;
+  color: white;
+}
