@@ -1,0 +1,59 @@
+@import '../../common';
+$groupDetailheaderHeight: 20vh;
+
+.groupDetails {
+  height: calc(100vh - $navbarHeight);
+  .groupDetails_header {
+    padding: 20px;
+    display: flex;
+    height: $groupDetailheaderHeight;
+    position: sticky;
+    top: $navbarHeight;
+    z-index: 998;
+    background-color: $secondaryColor;
+    .groupDetails_imp {
+      border: 2px solid $primaryColor;
+      width: 300px;
+      padding: 10px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    .group_members {
+      display: flex;
+      overflow-x: auto;
+      margin-left: 20px;
+      height: 17vh;
+      .group_member {
+        border: 2px solid $primaryColor;
+        width: 250px;
+        margin: 0 10px;
+        padding: 10px;
+        border-radius: 8px;
+        flex-shrink: 0;
+      }
+    }
+    .group_members::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+  .groupDetails_body {
+    background-color: $secondaryColor;
+    .groupDetails_body_header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      position: sticky;
+      top: calc($groupDetailheaderHeight + $navbarHeight);
+      background-color: $secondaryColor;
+    }
+    .groupDetails_expence_cards {
+      padding: 0 20px;
+      .groupDetails_expence_card {
+        margin: 20px 0;
+        border: 2px solid $primaryColor;
+        border-radius: 5px;
+        padding: 10px;
+      }
+    }
+  }
+}

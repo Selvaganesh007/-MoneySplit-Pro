@@ -1,0 +1,16 @@
+@import '../common';
+
+.navbar {
+  position: sticky;
+  z-index: 999;
+  top: 0%;
+  width: 100%;
+  background-color: $finalColor;
+  height: $navbarHeight;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  .logo {
+    font-size: 20px;
+  }
+}

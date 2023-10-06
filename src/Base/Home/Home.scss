@@ -1,0 +1,21 @@
+@import '../common';
+
+.home {
+  background-color: $secondaryColor;
+  height: 100vh;
+  color: $primaryFontColor;
+  .home_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 1px 1px 0.5px 2px $primaryColor;
+  }
+  .home_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80vh;
+  }
+}

@@ -1,0 +1,30 @@
+@import '../../common';
+
+.groupCard{
+  border: 2px solid $primaryColor;
+  background-color: $finalColor;
+  width: 30%;
+  margin: 10px;
+  height: 15rem;
+  border-radius: 8px;
+  .groupCard_header {
+    border-bottom: 2px solid $primaryColor;
+    padding: 10px;
+    text-align: center;
+    font-size:20px;
+    font-weight: 700;
+    font-family:monospace;
+  }
+  .groupCard_body {
+    padding: 10px;
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    .groupCard_owned {
+      color: rgb(98, 230, 98);
+    }
+    .groupCard_owe {
+      color: rgb(209, 40, 40);
+    }
+  }
+}
