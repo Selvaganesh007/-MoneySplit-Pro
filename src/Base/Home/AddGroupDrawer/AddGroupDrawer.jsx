@@ -2,6 +2,8 @@ import React from 'react';
 import './AddGroupDrawer.scss';
 import { Button, Drawer, Input, Space } from 'antd';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { GroupDetailContext } from '../../../App';
 
 const INITIAL_STATE = {
   group_name: '',
@@ -10,12 +12,14 @@ const INITIAL_STATE = {
 }
 
 const AddGroupDrawer = ({drawerOpen, setDrawerOpen}) => {
+  const {groupDetails, dispatch} = useContext(GroupDetailContext);
+
   const [groupDetail, setGroupDetail] = useState(INITIAL_STATE);
   const [memberName, setMemberName] = useState('');
 
   const handleGroupDetail = (value, field) => {
     if (field === 'group_name') {
-      setGroupDetail({...groupDetail, group_name: value, group_id: Math.floor(Math.random() *1000)})
+      setGroupDetail({...groupDetail, group_name: value, group_id: groupDetails.length + 1 })
     } else if (field === 'group_members') {
       setGroupDetail({...groupDetail, group_members: [...groupDetail.group_members, value]})
     }
@@ -26,6 +30,7 @@ const AddGroupDrawer = ({drawerOpen, setDrawerOpen}) => {
   }
 
   const handleAddNewGroup = () => {
+    dispatch({ type: "AddNewGroup", payload: groupDetail });
     handleDrawerClose();
   }
 
